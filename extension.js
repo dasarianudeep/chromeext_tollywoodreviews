@@ -49,16 +49,3 @@ $.ajax({ url: `${service.protocol}${service.hostname}${service.pathname}`}).then
 
     });
 });
-/*
- <div class="review_content-website">
-                <img src=${movie.reviews[0].sitelogo} />
-                <div>${movie.reviews[0].siteName}</div>
-            </div>
-            <div class="review_content-verdict">
-                <div>${movie.reviews[0].verdict}</div>
-            </div>
-            <div class="review_content-rating">
-                <div>${movie.reviews[0].rating}</div>
-                <div><a href=${movie.reviews[0].siteUrl} target="_blank">Click for more</a></div>
-            </div>
- */
