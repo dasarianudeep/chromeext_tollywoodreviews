@@ -1,10 +1,17 @@
 {
-  "name": "chromeext_tollywoodreviews",
+  "name": "Telugu Movie Reviews Aggregator",
   "version": "1.0.0",
   "description": "Telugu Movie Reviews Aggregator Chome Extension",
   "manifest_version": 2,
   "browser_action": {
-    "default_popup": "index.html"
+    "default_popup": "index.html",
+    "default_icon": "manatelugu.png"
+  },
+  "icons": {
+    "16": "manatelugu128.png",
+    "32": "manatelugu128.png",
+    "48": "manatelugu128.png",
+    "128": "manatelugu.png"
   },
   "content_security_policy":"script-src 'self' https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js; object-src 'self'"
 }
