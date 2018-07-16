@@ -1,7 +1,7 @@
 const service =  {
     protocol: 'https://',
-    hostname: 'agile-ocean-20166.herokuapp.com',
-    pathname: '/reviews'
+    hostname: 'o322sjjqmd.execute-api.us-east-1.amazonaws.com',
+    pathname: '/dev/reviews'
 };
 
 $.ajax({ url: `${service.protocol}${service.hostname}${service.pathname}`}).then(res => {
