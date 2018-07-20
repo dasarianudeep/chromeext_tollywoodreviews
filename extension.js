@@ -8,6 +8,14 @@ $.ajax({ url: `${service.protocol}${service.hostname}${service.pathname}`}).then
     $('.main_wrapper').hide();
 
     const getAllReviews = reviews => {
+        console.log(reviews);
+        if (reviews.length === 0) {
+            return `
+                <div class="noreviews">
+                   <p>No Reviews as of now! Coming Soon <span class="dot-loader"></span></p>
+                </div>
+            `;
+        }
         return reviews.map(review => {
             return `
             <div class="review_wrapper">

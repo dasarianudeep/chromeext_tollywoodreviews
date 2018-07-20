@@ -94,3 +94,36 @@ body {
         transform: rotate(360deg);
     }
 }
+
+.noreviews {
+    display: flex;
+}
+.noreviews > p {
+    width: 245px;
+    font-size: 105%;
+    font-weight: bold;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.dot-loader::before {
+    content: '';
+    animation: loaddots 2s infinite alternate;
+}
+
+@keyframes loaddots {
+    0% {
+        content: '';
+    }
+    25% {
+        content: '.';
+    }
+
+    75% {
+        content: '..';
+    }
+
+    100% {
+        content: '...'
+    }
+}
