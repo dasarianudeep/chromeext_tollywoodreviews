@@ -1,14 +1,13 @@
 const service =  {
-    protocol: 'https://',
-    hostname: 'o322sjjqmd.execute-api.us-east-1.amazonaws.com',
-    pathname: '/dev/reviews'
+    protocol: 'http://',
+    hostname: 's3.amazonaws.com/telugumoviereviews',
+    pathname: '/reviews.json'
 };
 
 $.ajax({ url: `${service.protocol}${service.hostname}${service.pathname}`}).then(res => {
     $('.main_wrapper').hide();
 
     const getAllReviews = reviews => {
-        console.log(reviews);
         if (reviews.length === 0) {
             return `
                 <div class="noreviews">
@@ -34,7 +33,7 @@ $.ajax({ url: `${service.protocol}${service.hostname}${service.pathname}`}).then
         })
     };
 
-    res.movies.telugu.forEach(movie => {
+    JSON.parse(res).movies.telugu.forEach(movie => {
         $('.moviereviews_wrapper').append(`
         <li class="movie">
         <div class="movie_name">
