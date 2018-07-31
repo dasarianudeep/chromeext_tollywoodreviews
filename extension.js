@@ -1,6 +1,6 @@
 const service =  {
     protocol: 'http://',
-    hostname: 's3.amazonaws.com/telugumoviereviews',
+    hostname: 'dcrcxdazjvfcx.cloudfront.net',
     pathname: '/reviews.json'
 };
 
