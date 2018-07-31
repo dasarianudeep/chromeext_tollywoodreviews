@@ -1,6 +1,6 @@
 {
   "name": "Telugu Movie Reviews Aggregator",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "description": "Telugu Movie Reviews Aggregator Chome Extension",
   "manifest_version": 2,
   "browser_action": {
