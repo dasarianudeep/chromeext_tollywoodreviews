@@ -1,7 +1,7 @@
 const service =  {
-    protocol: 'http://',
-    hostname: 'dcrcxdazjvfcx.cloudfront.net',
-    pathname: '/reviews.json'
+    protocol: 'https://',
+    hostname: 's3.amazonaws.com',
+    pathname: '/telugumoviereviews/reviews.json'
 };
 
 $.ajax({ url: `${service.protocol}${service.hostname}${service.pathname}`}).then(res => {
