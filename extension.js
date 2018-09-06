@@ -39,7 +39,7 @@ $.ajax({ url: `${service.protocol}${service.hostname}${service.pathname}`}).then
         <div class="movie_name">
             <img src=${movie.movieAvatar} width="150" height="150"/>
         </div>
-        <div class="movie_releasedata">Rel. Date: ${movie.releaseDate.replace(/[th,\,]/g, '')}</div>
+        <div class="movie_releasedata">Released On: ${movie.releaseDate.replace(/[s,rd,th,\,]/g, '')}</div>
         </li>
         <div class="review_content">
           ${getAllReviews(movie.reviews)}
