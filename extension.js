@@ -11,13 +11,12 @@ $.ajax({ url: `${service.protocol}${service.hostname}${service.pathname}`}).then
         if (reviews.length === 0) {
             return `
                 <div class="noreviews">
-                   <p>No Reviews as of now! Coming Soon <span class="dot-loader"></span></p>
+                   <p>No Reviews as of now ! Stay Tuned <span class="dot-loader"></span></p>
                 </div>
             `;
         }
         return reviews.map(review => {
-            return `
-            <div class="review_wrapper">
+            return `<div class="review_wrapper">
             <div class="review_content-website">
                 <img src=${review.sitelogo} />
             </div>
@@ -28,9 +27,8 @@ $.ajax({ url: `${service.protocol}${service.hostname}${service.pathname}`}).then
                 <div class="rating">${review.rating}</div>
                 <div><a href=${review.siteUrl} target="_blank">Read Review</a></div>
             </div>
-            </div>
-            `
-        })
+            </div>`;
+        });
     };
 
     JSON.parse(res).movies.telugu.forEach(movie => {
@@ -39,7 +37,7 @@ $.ajax({ url: `${service.protocol}${service.hostname}${service.pathname}`}).then
         <div class="movie_name">
             <img src=${movie.movieAvatar} width="150" height="150"/>
         </div>
-        <div class="movie_releasedata">Released On: ${movie.releaseDate.replace(/[s,rd,th,\,]/g, '')}</div>
+        <div class="movie_releasedata">Released On: ${movie.releaseDate}</div>
         </li>
         <div class="review_content">
           ${getAllReviews(movie.reviews)}
@@ -54,5 +52,9 @@ $.ajax({ url: `${service.protocol}${service.hostname}${service.pathname}`}).then
         $(this).next().slideToggle();
         $('.review_content').not( $(this).next()).slideUp();
 
+    });
+
+    document.querySelectorAll('.review_wrapper').forEach(n => {
+        n.nextSibling.textContent = '';
     });
 });

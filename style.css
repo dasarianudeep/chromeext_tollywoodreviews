@@ -1,5 +1,5 @@
 body {
-    background-color: #B3FFAB;
+    background-color: #5cdb95;
     width: 400px;
     height: 400px;
     overflow: auto;
@@ -34,9 +34,7 @@ body {
     padding: .75rem;
     margin: .25rem;
     border-radius: .2rem;
-    background: #B3FFAB;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #12FFF7, #B3FFAB);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #12FFF7, #B3FFAB); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: #8ee4af;
     box-shadow: 0 3px 3px rgba(0,0,0,0.16);
     border: 1px solid #0d47a1;
 }
@@ -62,6 +60,7 @@ body {
 .review_wrapper {
     display: flex;
     justify-content: space-between;
+    margin: 1rem 0;
 }
 .review_content-website > img {
     max-width: 80px;
@@ -108,7 +107,7 @@ body {
 
 .dot-loader::before {
     content: '';
-    animation: loaddots 2s infinite alternate;
+    animation: loaddots 1s infinite alternate;
 }
 
 @keyframes loaddots {
